@@ -1,5 +1,6 @@
 __version__ = (1, 0, 0)
 
+biba
 
 from .. import loader, utils
 import asyncio
@@ -29,11 +30,11 @@ class korobochka5Mod(loader.Module):
         if not getattr(message, "out", False):
             return
 
-        if message.raw_text.lower() == "Фарм 1 стоп":
+        if message.raw_text.lower() == "Farmoff1":
             self.set("biba1", False)
             await utils.answer(message, "<b>Фарм 1 остановлен</b>")
             await message.delete()
-        if message.raw_text.lower() == "Фарм 2 стоп":
+        if message.raw_text.lower() == "Farmoff2":
             self.set("biba2", False)
             await utils.answer(message, "<b>Фарм 2 остановлен.</b>")
             await message.delete()
