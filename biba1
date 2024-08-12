@@ -9,7 +9,7 @@ class korobochka5Mod(loader.Module):
 
     strings = {"name": "ADB"}
 
-    async def drochcmd(self, message):
+    async def biba1cmd(self, message):
         """Карточка для боя"""
         self.set("biba1", True)
         while self.get("biba1"):
@@ -17,7 +17,7 @@ class korobochka5Mod(loader.Module):
             await asyncio.sleep(14400)
         await message.delete()
 
-    async def dickcmd(self, message):
+    async def biba2cmd(self, message):
         """Карточка для хуйни"""
         self.set("biba2", True)
         while self.get("biba2"):
@@ -29,13 +29,13 @@ class korobochka5Mod(loader.Module):
         if not getattr(message, "out", False):
             return
 
-        if message.raw_text.lower() == "дрочка стоп":
+        if message.raw_text.lower() == "Фарм 1 стоп":
             self.set("droch", False)
-            await utils.answer(message, "<b>Дрочка остановлена.</b>")
+            await utils.answer(message, "<b>Фарм 1 остановлен</b>")
             await message.delete()
-        if message.raw_text.lower() == "хуй стоп":
+        if message.raw_text.lower() == "Фарм 2 стоп":
             self.set("dick", False)
-            await utils.answer(message, "<b>Рост хуя остановлен.</b>")
+            await utils.answer(message, "<b>Фарм 2 остановлен.</b>")
             await message.delete()
         if message.raw_text.lower() in [".biba1", ".biba2"]:
             await message.delete()
