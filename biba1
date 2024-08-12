@@ -7,7 +7,7 @@ import asyncio
 class korobochka5Mod(loader.Module):
     """"""
 
-    strings = {"name": "ADB"}
+    strings = {"name": "AniCard"}
 
     async def biba1cmd(self, message):
         """Карточка для боя"""
@@ -30,11 +30,11 @@ class korobochka5Mod(loader.Module):
             return
 
         if message.raw_text.lower() == "Фарм 1 стоп":
-            self.set("droch", False)
+            self.set("biba1", False)
             await utils.answer(message, "<b>Фарм 1 остановлен</b>")
             await message.delete()
         if message.raw_text.lower() == "Фарм 2 стоп":
-            self.set("dick", False)
+            self.set("biba2", False)
             await utils.answer(message, "<b>Фарм 2 остановлен.</b>")
             await message.delete()
         if message.raw_text.lower() in [".biba1", ".biba2"]:
