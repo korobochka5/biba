@@ -14,7 +14,7 @@ class korobochka5Mod(loader.Module):
         self.set("biba1", True)
         while self.get("biba1"):
             await message.reply("⚔️ Получить карту")
-            await asyncio.sleep(14400)
+            await asyncio.sleep(14460)
         await message.delete()
 
     async def biba2cmd(self, message):
@@ -22,7 +22,7 @@ class korobochka5Mod(loader.Module):
         self.set("biba2", True)
         while self.get("biba2"):
             await message.reply("🏵️ Получить карту")
-            await asyncio.sleep(14400)
+            await asyncio.sleep(14600)
         await message.delete()
 
     async def watcher(self, message):
